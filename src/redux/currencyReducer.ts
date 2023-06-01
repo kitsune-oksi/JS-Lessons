@@ -27,12 +27,12 @@ const initialState: CurrencyState = {
             sellRate: 3.06,
         },
         {
-            currencyName: 'RUR',
+            currencyName: 'RUB',
             buyRate: 0.0345,
             sellRate: 0.0341,
         },
     ],
-    currentCurrency: 'USD',
+    currentCurrency: 'EUR',
     isBuying: true,
     amountOfBYN: '',
     amountOfCurrency: '',
@@ -45,7 +45,7 @@ export const currencyReducer = (state: CurrencyState = initialState, action: Cur
         case ACTIONS_TYPE.CHANGE_CHANGE_ACTION:
             return {...state, isBuying: action.payload.isBuying};
         case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
-            return {...state, amountOfCurrency: action.payload.currentCurrency};
+            return {...state, currentCurrency: action.payload.currentCurrency};
         default:
             return state;
     }

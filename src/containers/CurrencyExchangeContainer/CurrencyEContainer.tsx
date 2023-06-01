@@ -11,7 +11,7 @@ import {
 import {connect, ConnectedProps, useDispatch, useSelector} from 'react-redux';
 import {IGlobalState} from "../../redux/state";
 
-const CurrencyEContainer: React.FC<TProps> = props => {
+export const CurrencyExchangeContainer: React.FC = props => {
 
     // const {
     //     currencies,
@@ -66,13 +66,13 @@ const CurrencyEContainer: React.FC<TProps> = props => {
     };
     const changeAction = (e: React.MouseEvent<HTMLSpanElement>) => {
         // e.currentTarget.dataset.action === 'buy' ? setAction(true) : setAction(false);
-        e.currentTarget.dataset.action === 'buy' ? ChangeActionAC(true) : ChangeActionAC(false);
+        e.currentTarget.dataset.action === 'buy' ? dispatch(ChangeActionAC(true)) : dispatch(ChangeActionAC(false));
     };
 
     const changeCurrentCurrency = (e: React.MouseEvent<HTMLLIElement>) => {
         // e.currentTarget.dataset.currency && changeCurrency(e.currentTarget.dataset.currency);
-        e.currentTarget.dataset.currency && СhangeCurrentCurrencyAC(e.currentTarget.dataset.currency);
-
+        e.currentTarget.dataset.currency && dispatch(СhangeCurrentCurrencyAC(e.currentTarget.dataset.currency));
+        console.log(currentCurrency)
     };
 
     return (
@@ -92,15 +92,15 @@ const CurrencyEContainer: React.FC<TProps> = props => {
     );
 };
 
-const mapStateToProps = ({currency}: { currency: CurrencyState }): CurrencyState => {
-    return {
-        currencies: currency.currencies,
-        currentCurrency: currency.currentCurrency,
-        isBuying: currency.isBuying,
-        amountOfBYN: currency.amountOfBYN,
-        amountOfCurrency: currency.amountOfCurrency,
-    };
-};
+// const mapStateToProps = ({currency}: { currency: CurrencyState }): CurrencyState => {
+//     return {
+//         currencies: currency.currencies,
+//         currentCurrency: currency.currentCurrency,
+//         isBuying: currency.isBuying,
+//         amountOfBYN: currency.amountOfBYN,
+//         amountOfCurrency: currency.amountOfCurrency,
+//     };
+// };
 
 // type MapDispatchToPropsType = {
 //     setCurrencyAmount: (amountOfBYN: string, amountOfCurrency: string) => void
@@ -127,15 +127,15 @@ const mapStateToProps = ({currency}: { currency: CurrencyState }): CurrencyState
 // const connector = connect(mapStateToProps, mapDispatchToProps);
 
 
-const actionCreators = {
-    ChangeCurrencyFieldAC,
-    ChangeActionAC,
-    СhangeCurrentCurrencyAC
-}
-
-const connector = connect(mapStateToProps, actionCreators);
-
-type TProps = ConnectedProps<typeof connector>;
-
-export default connector(CurrencyEContainer);
+// const actionCreators = {
+//     ChangeCurrencyFieldAC,
+//     ChangeActionAC,
+//     СhangeCurrentCurrencyAC
+// }
+//
+// const connector = connect(mapStateToProps, actionCreators);
+//
+// type TProps = ConnectedProps<typeof connector>;
+//
+// export default connector(CurrencyEContainer);
 
