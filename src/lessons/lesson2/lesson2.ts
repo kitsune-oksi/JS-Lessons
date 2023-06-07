@@ -23,6 +23,13 @@ console.log('lesson 2');
 
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
+function sum (el1: number) {
+    return function (el2: number) {
+        return el1+el2
+    }
+}
+
+console.log('task 1 ====>', sum(3)(6))
 
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
@@ -33,6 +40,20 @@ console.log('lesson 2');
 // counter2(); // 1
 // counter(); // 3
 
+function makeCounter () {
+    let count = 1;
+    return function () {
+        return count++
+    }
+}
+
+const counter = makeCounter();
+console.log('task 2 ====>', counter());
+console.log(counter());
+const counter2 = makeCounter();
+console.log(counter2());
+console.log(counter());
+
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
 // и возвращала следующий объект методов:
@@ -40,6 +61,36 @@ console.log('lesson 2');
 // decrease: -1
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
+
+const makeCounterUpgrade = function (num: number) {
+    let count = num;
+    function changeBy (val: number) {
+        return count += val
+    }
+    return {
+        increase: function () {
+            return changeBy(1)
+        },
+        decrease: function () {
+            return changeBy(-1)
+        },
+        reset: function () {
+            return count = 0
+        },
+        set: function () {
+            return count = num
+        }
+    }
+}
+
+const counterUpgrade = makeCounterUpgrade(2);
+console.log('task 3 ====>', counterUpgrade.increase())
+console.log(counterUpgrade.increase())
+console.log(counterUpgrade.increase())
+console.log(counterUpgrade.decrease())
+console.log(counterUpgrade.reset())
+console.log(counterUpgrade.set())
+console.log(counterUpgrade.decrease())
 
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
