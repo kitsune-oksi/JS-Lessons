@@ -209,8 +209,81 @@ function fib(n: number) {
 console.log('task 5.3 ====>',fib(3))
 console.log(fib(7))
 
+// Напишите функцию printList(list), которая выводит элементы списка по одному.
+//     Сделайте два варианта решения: используя цикл и через рекурсию.
+
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+// @ts-ignore
+function printListVer1(list) {
+    while (list) {
+        alert(list.value);
+        list = list.next;
+    }
+}
+
+// @ts-ignore
+function printListVer2(list) {
+    alert(list.value)
+    if (list.next) {
+        printListVer2(list)
+    }
+}
+
+// Выведите односвязный список из предыдущего задания Вывод односвязного списка в обратном порядке.
+//     Сделайте два решения: с использованием цикла и через рекурсию.
+
+// @ts-ignore
+function printListRevVer2(list) {
+    if (list.next) {
+        printListVer2(list)
+    }
+    alert(list.value)
+}
+
+// @ts-ignore
+function printListRevVer1(list) {
+    let arr = [];
+    while (list) {
+        arr.push(list.value);
+        list = list.next;
+    }
+    for (let i = arr.length-1; i>=0; i--) {
+        alert(arr[i])
+    }
+}
+
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
+
+// @ts-ignore
+function flattering (arr) {
+    // @ts-ignore
+    let result = [];
+    // @ts-ignore
+    (function helper (arr) {
+        // @ts-ignore
+        arr.forEach((el)=> Array.isArray(el) ? helper(el) : result.push(el))
+    }) (arr)
+    // @ts-ignore
+    return result
+}
+
+let arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+
+console.log('task 6 ====>', flattering(arr1))
 
 // just a plug
 export default () => {
