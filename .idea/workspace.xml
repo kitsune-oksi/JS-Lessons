@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a87fd983-df8a-4041-b019-341735919f99" name="Changes" comment="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 1-3">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="a87fd983-df8a-4041-b019-341735919f99" name="Changes" comment="Lesson 5 (Promise):&#10;&#10;Study useful links in the lesson4.ts file&#10;&#10;Done task 1-4">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lessons/lesson2/lesson2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson2/lesson2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lessons/lesson4/Lesson4.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson4/Lesson4.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lessons/lesson4/lesson_4.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson4/lesson_4.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +18,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="lesson5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2QXyeYM9V8JS4fPxC29YF8nUVW0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,7 +64,17 @@
       <workItem from="1685518304434" duration="387000" />
       <workItem from="1685616376105" duration="3314000" />
       <workItem from="1685682085053" duration="9547000" />
-      <workItem from="1686139600107" duration="11028000" />
+      <workItem from="1686139600107" duration="11296000" />
+      <workItem from="1686820957397" duration="1216000" />
+      <workItem from="1686822207985" duration="1057000" />
+      <workItem from="1687761268311" duration="98000" />
+      <workItem from="1687844826664" duration="5590000" />
+      <workItem from="1687929444229" duration="3070000" />
+      <workItem from="1688019748436" duration="1745000" />
+      <workItem from="1688036166007" duration="37000" />
+      <workItem from="1689576392110" duration="56000" />
+      <workItem from="1689758443609" duration="3332000" />
+      <workItem from="1689918842075" duration="1816000" />
     </task>
     <task id="LOCAL-00001" summary="Familiarize yourself with the project files (the Redux folders, containers, components and the App.tsx file) and understand their logic;&#10;Fill in actions and action creators in action.ts file;&#10;Fill in the reducer in the currencyReducer file;&#10;The entire application should work without // @ts-ignore;&#10;Rewrite the CurrencyExchangeContainer component using the mapDispatchToProps shorthand;&#10;Rewrite the CurrencyExchangeContainer component with useDispatch and useSelector.">
       <created>1685621300572</created>
@@ -76,7 +90,42 @@
       <option name="project" value="LOCAL" />
       <updated>1686120124390</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 4-5">
+      <created>1686745645013</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686745645013</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 5-6">
+      <created>1686826868430</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686826868430</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Lesson 5 (This, function constructor, Call/Apply/Bind:&#10;&#10;Study useful links in the lesson5.ts file&#10;&#10;Done task 1, 2, 7">
+      <created>1687856859754</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687856859754</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Lesson 5 (This, function constructor, Call/Apply/Bind:&#10;&#10;Study useful links in the lesson5.ts file&#10;&#10;Done task 3-6">
+      <created>1688021438121</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688021438122</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Lesson 5 (Promise):&#10;&#10;Study useful links in the lesson4.ts file&#10;&#10;Done task 1-4">
+      <created>1689762747077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689762747077</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +145,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Familiarize yourself with the project files (the Redux folders, containers, components and the App.tsx file) and understand their logic;&#10;Fill in actions and action creators in action.ts file;&#10;Fill in the reducer in the currencyReducer file;&#10;The entire application should work without // @ts-ignore;&#10;Rewrite the CurrencyExchangeContainer component using the mapDispatchToProps shorthand;&#10;Rewrite the CurrencyExchangeContainer component with useDispatch and useSelector." />
     <MESSAGE value="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 1-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 1-3" />
+    <MESSAGE value="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 4-5" />
+    <MESSAGE value="Lesson 2 (Closure and Recursion):&#10;&#10;Study useful links in the lesson2.ts file and solve problems&#10;&#10;Done task 5-6" />
+    <MESSAGE value="Lesson 5 (This, function constructor, Call/Apply/Bind:&#10;&#10;Study useful links in the lesson5.ts file&#10;&#10;Done task 1, 2, 7" />
+    <MESSAGE value="Lesson 5 (This, function constructor, Call/Apply/Bind:&#10;&#10;Study useful links in the lesson5.ts file&#10;&#10;Done task 3-6" />
+    <MESSAGE value="Lesson 5 (Promise):&#10;&#10;Study useful links in the lesson4.ts file&#10;&#10;Done task 1-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5 (Promise):&#10;&#10;Study useful links in the lesson4.ts file&#10;&#10;Done task 1-4" />
   </component>
 </project>
