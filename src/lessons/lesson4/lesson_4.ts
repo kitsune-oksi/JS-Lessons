@@ -1,3 +1,4 @@
+
 console.log('lesson 4');
 
 // http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
@@ -75,18 +76,37 @@ let handlePromise = {
     }
 }
 
-const createPromiseHandle = () => {
-
+export const createPromiseHandle = () => {
+    // @ts-ignore
+    handlePromise.promise = new Promise((resolve, reject) => {
+        // @ts-ignore
+        handlePromise.resolve = resolve;
+        // @ts-ignore
+        handlePromise.reject = reject;
+    });
+    console.log('=====>Task 05', handlePromise.promise);
 }
 
-const resolvePromiseHandle = () => {
-
+export const resolvePromiseHandle = () => {
+    if (handlePromise.resolve) {
+        // @ts-ignore
+        handlePromise.resolve();
+        // @ts-ignore
+        handlePromise.onSuccess('{}')
+    } else {
+        console.log('Promise isn`t create')
+    }
 }
 
-const rejectPromiseHandle = () => {
-
+export const rejectPromiseHandle = () => {
+    if (handlePromise.reject) {
+        // @ts-ignore
+        handlePromise.reject();
+        handlePromise.onError('')
+    } else {
+        console.log('Promise isn`t create')
+    }
 }
-
 
 
 // Task 06
