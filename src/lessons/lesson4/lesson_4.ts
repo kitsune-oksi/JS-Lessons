@@ -1,4 +1,3 @@
-
 console.log('lesson 4');
 
 // http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
@@ -116,12 +115,51 @@ export const rejectPromiseHandle = () => {
 // Создайте функцию print, которая выводит в консоль значение своего параметра
 // Добавьте два метода then и передайте созданные функции.
 
+let resolveTimoutNamePromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve('My name is');
+    }, 1000)
+})
 
-// Task 7
+const onSuccess = (param: any) => `${param} Oxi`;
+
+const print = (param: any) => console.log(param);
+
+resolveTimoutNamePromise
+    .then(value => onSuccess(value))
+    .then(newValue => print(newValue))
+
+// Task 07
 // Создайте три промиса. Первый промис возвращает объект { name: "Anna" } через 2с,
 // второй промис возвращает объект {age: 16} через 3 с, а третий {city: ''} через 4с.
 // Получите результаты работы промисов, объедините свойства объектов
 // и выведите в консоль {name, age, city}
+
+let nameAnnaPromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve({name: "Anna"});
+    }, 2000)
+})
+
+let agePromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve({age: 16});
+    }, 3000)
+})
+
+let cityPromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve({city: ''});
+    }, 4000)
+})
+
+const generalPromise = Promise.all([nameAnnaPromise, agePromise, cityPromise]);
+
+generalPromise
+    .then((reults => {
+        console.log('=====>Task 7', Object.assign(reults[0], reults[1], reults[2]));
+    })
+)
 
 
 // just a plug
