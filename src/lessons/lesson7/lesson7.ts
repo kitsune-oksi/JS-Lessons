@@ -1,3 +1,4 @@
+
 console.log('Lesson 7');
 
 // __Proto__
@@ -19,6 +20,29 @@ console.log('Lesson 7');
 // метода walk, eat, sleep - каждый метод должен выводить в консоль строку имя + действие. Пример:
 // walk => `${this.name} walking`
 // проверить, что методы работают
+//
+
+class Animal {
+    name: string;
+    constructor(name = 'Animal') {
+        this.name = name;
+    }
+
+    walk() {
+        console.log(`${this.name} walking`);
+    }
+
+    eat() {
+        console.log(`${this.name} eating`);
+    }
+
+    sleep() {
+        console.log(`${this.name} sleeping`);
+    }
+}
+
+const marcy = new Animal('Marcy');
+marcy.eat();
 
 
 //Task 02
@@ -26,12 +50,69 @@ console.log('Lesson 7');
 // параметра, реализовать методы roar и climb аналогично классу Animal
 // проверить, что все методы работают
 
+class Monkey {
+    name: string;
+    constructor(name = 'Monkey') {
+        this.name = name;
+    }
+
+    walk() {
+        console.log(`${this.name} walking`);
+    }
+
+    eat() {
+        console.log(`${this.name} eating`);
+    }
+
+    sleep() {
+        console.log(`${this.name} sleeping`);
+    }
+    roar() {
+        console.log(`${this.name} roaring`);
+    }
+    climb() {
+        console.log(`${this.name} climbing`);
+    }
+}
+
+const marsel = new Monkey('Marsel');
+marsel.climb()
 
 //Task 03
 // Реализовать класс Human на базе класса Monkey, конструктор принимает name(по умолчанию 'Human') в качестве
 // параметра, реализовать методы speak и think аналогично классу Animal
 // проверить, что все методы работают
 
+class Human {
+    name: string;
+    constructor(name = 'Human') {
+        this.name = name;
+    }
+
+    walk() {
+        console.log(`${this.name} walking`);
+    }
+
+    eat() {
+        console.log(`${this.name} eating`);
+    }
+
+    sleep() {
+        console.log(`${this.name} sleeping`);
+    }
+    roar() {
+        console.log(`${this.name} roaring`);
+    }
+    climb() {
+        console.log(`${this.name} climbing`);
+    }
+    speak() {
+        console.log(`${this.name} speaking`);
+    }
+    think() {
+        console.log(`${this.name} thinking`);
+    }
+}
 
 // Task 04
 // Реализовать таски 01-03 через функции конструкторы в отдельном JS файле, реализовать наследование
@@ -42,4 +123,5 @@ console.log('Lesson 7');
 
 
 // just a plug
-export default () => {};
+export default () => {
+};
