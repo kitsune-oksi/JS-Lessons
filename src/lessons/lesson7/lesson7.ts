@@ -22,7 +22,11 @@ console.log('Lesson 7');
 // проверить, что методы работают
 //
 
-class Animal {
+interface cteation {
+    name: string
+}
+
+class Animal implements cteation {
     name: string;
     constructor(name = 'Animal') {
         this.name = name;
@@ -50,22 +54,9 @@ marcy.eat();
 // параметра, реализовать методы roar и climb аналогично классу Animal
 // проверить, что все методы работают
 
-class Monkey {
-    name: string;
+class Monkey extends Animal{
     constructor(name = 'Monkey') {
-        this.name = name;
-    }
-
-    walk() {
-        console.log(`${this.name} walking`);
-    }
-
-    eat() {
-        console.log(`${this.name} eating`);
-    }
-
-    sleep() {
-        console.log(`${this.name} sleeping`);
+        super(name)
     }
     roar() {
         console.log(`${this.name} roaring`);
@@ -77,34 +68,16 @@ class Monkey {
 
 const marsel = new Monkey('Marsel');
 marsel.climb()
+marsel.eat()
 
 //Task 03
 // Реализовать класс Human на базе класса Monkey, конструктор принимает name(по умолчанию 'Human') в качестве
 // параметра, реализовать методы speak и think аналогично классу Animal
 // проверить, что все методы работают
 
-class Human {
-    name: string;
+class Human extends Monkey {
     constructor(name = 'Human') {
-        this.name = name;
-    }
-
-    walk() {
-        console.log(`${this.name} walking`);
-    }
-
-    eat() {
-        console.log(`${this.name} eating`);
-    }
-
-    sleep() {
-        console.log(`${this.name} sleeping`);
-    }
-    roar() {
-        console.log(`${this.name} roaring`);
-    }
-    climb() {
-        console.log(`${this.name} climbing`);
+        super(name)
     }
     speak() {
         console.log(`${this.name} speaking`);
@@ -114,12 +87,21 @@ class Human {
     }
 }
 
+const oxi = new Human('Oxi');
+oxi.speak()
+oxi.roar()
+
 // Task 04
 // Реализовать таски 01-03 через функции конструкторы в отдельном JS файле, реализовать наследование
 
 
 // Task 05
 // Используя метод Apply реализовать свой собственный метод bind
+
+// @ts-ignore
+// Fanction.prototype.myBind = function (thisArgs, args...) {
+//
+// }
 
 
 // just a plug
