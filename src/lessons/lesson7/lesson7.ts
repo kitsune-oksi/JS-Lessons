@@ -99,10 +99,20 @@ oxi.roar()
 // Используя метод Apply реализовать свой собственный метод bind
 
 // @ts-ignore
-// Fanction.prototype.myBind = function (thisArgs, args...) {
-//
-// }
+Function.prototype.myBind = (fn, context, ...boundArgs) => (...args) => {
+    return fn.apply(context, [...boundArgs, ...args])
+}
 
+function greeting(greeting: string, punctuation: string) {
+    // @ts-ignore
+    return `${greeting} ${this.userName}${punctuation}`;
+}
+
+const alex = { userName: "Alex" };
+// @ts-ignore
+const alexBound = greeting.myBind(greeting, alex);
+
+console.log(alexBound("Hello", "!"));
 
 // just a plug
 export default () => {
