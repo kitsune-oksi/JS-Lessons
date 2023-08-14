@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a87fd983-df8a-4041-b019-341735919f99" name="Changes" comment="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 1-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lessons/lesson3/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson3/API.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lessons/lesson3/Lesson3.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson3/Lesson3.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lessons/lesson3/lesson_3.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson3/lesson_3.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,8 @@
       <workItem from="1690462416726" duration="10222000" />
       <workItem from="1690969034595" duration="19000" />
       <workItem from="1691065299324" duration="1905000" />
-      <workItem from="1691749133004" duration="5041000" />
+      <workItem from="1691749133004" duration="5755000" />
+      <workItem from="1692012105375" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="Familiarize yourself with the project files (the Redux folders, containers, components and the App.tsx file) and understand their logic;&#10;Fill in actions and action creators in action.ts file;&#10;Fill in the reducer in the currencyReducer file;&#10;The entire application should work without // @ts-ignore;&#10;Rewrite the CurrencyExchangeContainer component using the mapDispatchToProps shorthand;&#10;Rewrite the CurrencyExchangeContainer component with useDispatch and useSelector.">
       <created>1685621300572</created>
@@ -172,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690880800112</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 1-4">
+      <created>1691759631236</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1691759631236</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
