@@ -1,11 +1,27 @@
 // Task 1
-// Есть некоторая строка (const str = 'fgfggg';), что будет, если мы возьмем str[0]
+// Есть некоторая строка (const str = 'fgfggg';), что будет, если мы возьмем str[0] ---> str[0] вернет символ строки, который находится по нулевому индексу. Строка в js — immutable, то есть из нее можно прочитать символ, а вот записать нет.
 
 // Task 2
 // Реализуйте необходимый код, что бы выражение (2).plus(3).minus(1) сработало и вернуло 4
 
+Number.prototype.plus = function (num) {
+	return this + num
+}
+
+Number.prototype.minus = function (num) {
+	return this - num
+}
+
+console.log('Task 2 --->', (2).plus(3).minus(1))
+
 // Task 3
 // Реализуйте функцию, которая принимает следующие аргументы (строки) '*', '1', 'b', '1c', и возвращает строку '1*b*1c'
+
+const stringMult = (separ, firstNum, secNum, thirdNum) => {
+	return `${firstNum}${separ}${secNum}${separ}${thirdNum}`
+}
+
+console.log('=====>Task 3', stringMult("*", "1", "b", "1c"));
 
 // Task 4
 // Напишите функцию которая найдет сумму всех вершин в структуре данны типа tree
@@ -44,7 +60,7 @@ const tree = {
 // Task 5
 // исправить код, что бы работал правильно
 
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
 	setTimeout(function () {
 		console.log(i);
 	}, 100);
@@ -59,16 +75,38 @@ function Book(name, author) {
 	return this;
 }
 
-// function Foo(Book, 'Учебник javascript', 'Петр Сергеев')
+function Foo(Book, name, autor) {
+	return Book(name, autor)
+}
 //
-// var book = Foo(Book, 'js', 'petr');
-// console.log(book.name);
+var book = Foo(Book, 'js', 'petr');
+console.log('Task 6---->', book.name);
 
 // Task 7
 // Реализовать функцию f: f(2, 3) -> 5, при вызове f(2)(3), тоже вернет 5
 
+function f (a, b) {
+	return b !== undefined ? a + b : function (b) {return a + b}
+}
+
+console.log('=====>Task 7', f(2, 3));
+
 // Task 8
-// Реализовать функцию f: f(1)(2)(3)() -> 6, f(0)(3)(1)(5)() -> 8
+// Реализовать функцию f: f(1)(2)(3)() -> 6, f(0)(3)(1)(5)() -> 9
+
+function f2 (arg) {
+	const value = arg;
+	return function (arg) {
+		if (arg === undefined) {
+			return value
+		} else {
+			return  f2(value+arg)
+		}
+	}
+}
+
+console.log('=====>Task 8', f2(1)(2)(3)());
+console.log('=====>Task 8', f2(0)(3)(1)(5)());
 
 // Task 9
 // Реализовать функции seven, plus, one, five, minus, two так, что бы следующие вызовы работали seven(plus(one())) -> 8. five(minus(two())) -> 3
