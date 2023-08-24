@@ -5,11 +5,11 @@
 // Реализуйте необходимый код, что бы выражение (2).plus(3).minus(1) сработало и вернуло 4
 
 Number.prototype.plus = function (num) {
-	return this + num
+    return this + num
 }
 
 Number.prototype.minus = function (num) {
-	return this - num
+    return this - num
 }
 
 console.log('Task 2 --->', (2).plus(3).minus(1))
@@ -18,7 +18,7 @@ console.log('Task 2 --->', (2).plus(3).minus(1))
 // Реализуйте функцию, которая принимает следующие аргументы (строки) '*', '1', 'b', '1c', и возвращает строку '1*b*1c'
 
 const stringMult = (separ, firstNum, secNum, thirdNum) => {
-	return `${firstNum}${separ}${secNum}${separ}${thirdNum}`
+    return `${firstNum}${separ}${secNum}${separ}${thirdNum}`
 }
 
 console.log('=====>Task 3', stringMult("*", "1", "b", "1c"));
@@ -29,55 +29,56 @@ console.log('=====>Task 3', stringMult("*", "1", "b", "1c"));
 // В цикле
 
 const tree = {
-	valueNode: 3,
-	next: [{
-		valueNode: 1,
-		next: null
-	},
-		{
-			valueNode: 3,
-			next: null
-		},
-		{
-			valueNode: 2,
-			next: null
-		},
-		{
-			valueNode: 2,
-			next: [
-				{
-					valueNode: 1,
-					next: null
-				},
-				{
-					valueNode: 5,
-					next: null
-				}
-			]
-		}]
+    valueNode: 3,
+    next: [{
+        valueNode: 1,
+        next: null
+    },
+        {
+            valueNode: 3,
+            next: null
+        },
+        {
+            valueNode: 2,
+            next: null
+        },
+        {
+            valueNode: 2,
+            next: [
+                {
+                    valueNode: 1,
+                    next: null
+                },
+                {
+                    valueNode: 5,
+                    next: null
+                }
+            ]
+        }]
 };
 
 // Task 5
 // исправить код, что бы работал правильно
 
 for (let i = 0; i < 10; i++) {
-	setTimeout(function () {
-		console.log(i);
-	}, 100);
+    setTimeout(function () {
+        console.log(i);
+    }, 100);
 }
 
 // Task 6
 // Реализуйте функцию Foo, что бы все корректно работало
 
 function Book(name, author) {
-	this.name = name;
-	this.author = author;
-	return this;
+    this.name = name;
+    this.author = author;
+    return this;
 }
 
 function Foo(Book, name, autor) {
-	return Book(name, autor)
+    return Book(name, autor)
 }
+
 //
 var book = Foo(Book, 'js', 'petr');
 console.log('Task 6---->', book.name);
@@ -85,8 +86,10 @@ console.log('Task 6---->', book.name);
 // Task 7
 // Реализовать функцию f: f(2, 3) -> 5, при вызове f(2)(3), тоже вернет 5
 
-function f (a, b) {
-	return b !== undefined ? a + b : function (b) {return a + b}
+function f(a, b) {
+    return b !== undefined ? a + b : function (b) {
+        return a + b
+    }
 }
 
 console.log('=====>Task 7', f(2, 3));
@@ -94,15 +97,15 @@ console.log('=====>Task 7', f(2, 3));
 // Task 8
 // Реализовать функцию f: f(1)(2)(3)() -> 6, f(0)(3)(1)(5)() -> 9
 
-function f2 (arg) {
-	const value = arg;
-	return function (arg) {
-		if (arg === undefined) {
-			return value
-		} else {
-			return  f2(value+arg)
-		}
-	}
+function f2(arg) {
+    const value = arg;
+    return function (arg) {
+        if (arg === undefined) {
+            return value
+        } else {
+            return f2(value + arg)
+        }
+    }
 }
 
 console.log('=====>Task 8', f2(1)(2)(3)());
@@ -111,11 +114,50 @@ console.log('=====>Task 8', f2(0)(3)(1)(5)());
 // Task 9
 // Реализовать функции seven, plus, one, five, minus, two так, что бы следующие вызовы работали seven(plus(one())) -> 8. five(minus(two())) -> 3
 
+function seven(arg) {
+    if (typeof arg === "function") {
+        return arg(7)
+    }
+    return 7
+}
+
+function plus(arg) {
+    return function (a) {
+        return a + arg
+    }
+}
+
+function one(arg) {
+    if (typeof arg === "function") {
+        return arg(1)
+    }
+    return 1
+}
+
+console.log('=====>Task 9', seven(plus(one())));
+
 // Task 10
 // Реализовать функцию сортировки массива пузырьком
 
+let m = [1, 7, 5, 13, 8];
+let count = m.length - 1;
+let max;
+for (let i = 0; i < count; i++) {
+    for (let j = 0; j < count - i; j++) {
+        if (m[j] > m[j + 1]) {
+            max = m[j];
+            m[j] = m[j + 1];
+            m[j + 1] = max;
+        }
+    }
+}
+
+console.log('=====> Task 10', m);
+
 // Task 11
 // Есть строка, состоящая из разных скобок - str = "())({}}{()][][", написать функцию проверки закрыты ли все.
+
+
 
 // Task 12
 // Необходимо написать функцию, принимающую в аргументах массив целых чисел и возвращающую новый массив, состоящий только из уникальных значений первого массива.
@@ -129,23 +171,23 @@ console.log('=====>Task 8', f2(0)(3)(1)(5)());
 // getTreeValues(tree); // => [1, 2, 3, 4, 5, 6, 7]
 
 const tree2 = {
-	value: 1,
-	children: [
-		{
-			value: 2,
-			children: [
-				{ value: 4 },
-				{ value: 5 },
-			]
-		},
-		{
-			value: 3,
-			children: [
-				{ value: 6 },
-				{ value: 7 },
-			]
-		}
-	]
+    value: 1,
+    children: [
+        {
+            value: 2,
+            children: [
+                {value: 4},
+                {value: 5},
+            ]
+        },
+        {
+            value: 3,
+            children: [
+                {value: 6},
+                {value: 7},
+            ]
+        }
+    ]
 };
 
 // Task 15
@@ -187,13 +229,13 @@ const tree2 = {
 // Что выведет консоль?
 
 Promise
-	.resolve()
-	.then(() => console.log(1))
-	.then(() => console.log(2))
-	.then(() => console.log(3));
+    .resolve()
+    .then(() => console.log(1))
+    .then(() => console.log(2))
+    .then(() => console.log(3));
 
 Promise
-	.resolve()
-	.then(() => console.log(4))
-	.then(() => console.log(5))
-	.then(() => console.log(6));
+    .resolve()
+    .then(() => console.log(4))
+    .then(() => console.log(5))
+    .then(() => console.log(6));

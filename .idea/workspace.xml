@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a87fd983-df8a-4041-b019-341735919f99" name="Changes" comment="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 1-4">
+    <list default="true" id="a87fd983-df8a-4041-b019-341735919f99" name="Changes" comment="Session 8 - Review&#10;&#10;Solve all problems in the file lesson_8.js&#10;&#10;done tasks 9-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lessons/lesson3/lesson_3.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson3/lesson_3.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lessons/lesson6/lesson6.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson6/lesson6.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lessons/lesson8/lesson_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lessons/lesson8/lesson_8.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson7" />
+        <entry key="$PROJECT_DIR$" value="lesson8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +80,10 @@
       <workItem from="1690969034595" duration="19000" />
       <workItem from="1691065299324" duration="1905000" />
       <workItem from="1691749133004" duration="5755000" />
-      <workItem from="1692012105375" duration="1318000" />
+      <workItem from="1692012105375" duration="1511000" />
+      <workItem from="1692096605528" duration="3336000" />
+      <workItem from="1692173224115" duration="1949000" />
+      <workItem from="1692866848112" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="Familiarize yourself with the project files (the Redux folders, containers, components and the App.tsx file) and understand their logic;&#10;Fill in actions and action creators in action.ts file;&#10;Fill in the reducer in the currencyReducer file;&#10;The entire application should work without // @ts-ignore;&#10;Rewrite the CurrencyExchangeContainer component using the mapDispatchToProps shorthand;&#10;Rewrite the CurrencyExchangeContainer component with useDispatch and useSelector.">
       <created>1685621300572</created>
@@ -178,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691759631236</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 5-6">
+      <created>1692013613812</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1692013613812</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Session 8 - Review&#10;&#10;Solve all problems in the file lesson_8.js&#10;&#10;done tasks 1-3, 5-8">
+      <created>1692108419994</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692108419994</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +228,8 @@
     <MESSAGE value="Lesson 7 (Proto / Prototype):&#10;&#10;Study useful links in the lesson7.ts file&#10;&#10;Done task 4" />
     <MESSAGE value="Lesson 7 (Proto / Prototype):&#10;&#10;Study useful links in the lesson7.ts file&#10;&#10;Done task 5" />
     <MESSAGE value="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 1-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 1-4" />
+    <MESSAGE value="Lesson 3 (Working with simple APIs using axios, Promise):&#10;&#10;Study useful links in the lesson3.ts file&#10;&#10;Done task 5-6" />
+    <MESSAGE value="Session 8 - Review&#10;&#10;Solve all problems in the file lesson_8.js&#10;&#10;done tasks 1-3, 5-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Session 8 - Review&#10;&#10;Solve all problems in the file lesson_8.js&#10;&#10;done tasks 1-3, 5-8" />
   </component>
 </project>
