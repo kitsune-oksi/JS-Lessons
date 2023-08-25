@@ -50,9 +50,9 @@ function compareAcademicPerformance(a: Student, b: Student) {
 
 const averageStudents = students.sort(compareAcademicPerformance)
 
-function getGoodStudents (students: Student[]) {
+function getGoodStudents(students: Student[]) {
     let goodStudents: Student[] = [];
-    students.forEach((el)=>{
+    students.forEach((el) => {
         if (!el.academicPerformance.some(el => el < 4)) {
             goodStudents.push(el)
         }
@@ -85,6 +85,42 @@ class ExampleClass {
 // Методы: установка значений атрибутов, получение значений атрибутов, вывод информации.
 // Создать массив объектов данного класса.
 // Вывести список покупателей в алфавитном порядке и список покупателей, у которых номер кредитной карточки находится в заданном диапазоне.
+
+type CustomerType = 'surname' | 'name' | 'address' | 'accountNumber'
+
+class Customer {
+    constructor(
+        private surname: string,
+        private name: string,
+        private address: string,
+        private accountNumber: number
+    ) {
+    }
+
+    getInfo() {
+        return `name: ${this.name} surname: ${this.surname} address: ${this.address} accountNumber: ${this.accountNumber}`
+    }
+
+    getField(field: CustomerType): string | number {
+        return this[field]
+    }
+
+    setField(field: CustomerType, newValue: string) {
+        if (field === 'accountNumber') {
+            this[field] = Number(newValue)
+        } else if (field === 'surname' || field === 'name' || field === 'address') {
+            this[field] = newValue
+        } else {
+            throw new Error('Property does not exist')
+        }
+    }
+}
+
+const customer1 = new Customer('Smith', 'Ann', 'NY', 234432)
+console.log(customer1.getField("surname"));
+customer1.setField('surname', 'Kitik')
+console.log(customer1.getField("surname"));
+
 
 // Task 05
 // Создать класс машина - имеющий марку, число цилиндров, мощность. Определить конструктор и функцию печати.
